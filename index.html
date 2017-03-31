@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>全能设计师</title>
+<link rel="stylesheet" href="style/jquery.fullPage.min.css">
+<link rel="stylesheet" href="style/index.css">
+<link rel="stylesheet" href="style/base.css">
+</head>
+<body>
+	<!-- 顶部固定导航 -->
+	<ul id="menu">
+		<li>
+			<a href="#page1">关于我</a>
+			<span></span>
+		</li>
+		<li>
+			<a href="#page2">专业技能</a>
+			<span></span>
+		</li>
+		<li>
+			<a href="#page3">我的经历</a>
+			<span></span>
+		</li>
+		<li>
+			<a href="#page4">我的作品</a>
+			<span></span>
+		</li>
+		<li>
+			<a href="#page5">联系我</a>
+			<span></span>
+		</li>
+	</ul>
+
+	<!-- 主体滚屏 -->
+    <div id="fullpage">
+    	<div class="section section_01">
+    		<div class="section_box">
+    			<h1 class="author"></h1>
+    			<p>生活是一种绵延不绝的渴望,渴望不断上升,变得更伟大而高贵。</p>
+    			<p>我叫鲍枫林</p>
+    			<p>26岁</p>
+    			<p>我是一名前端工程师</p>
+    			<p>邮箱：497249180@qq.com</p>
+    		</div>
+    	</div>
+    	<div class="section section_02">
+    		<div class="section_box">
+    			<h2 class="title">我的技能</h2>
+    			<canvas id="canvas1" width="250" height="250"></canvas>
+				<canvas id="canvas2" width="250" height="250"></canvas>
+				<canvas id="canvas3" width="250" height="250"></canvas>
+				<canvas id="canvas4" width="250" height="250"></canvas>
+    		</div>
+    	</div>
+    	<div class="section section_03">
+    		<div class="section_box">
+				<h1>教育经历</h1>
+    			<p>2012年9月-2016年6月 ：安徽省滁州学院（本科）</p>
+				<p>专业：地理信息系统</p>
+				<p>英语技能 ：CET4,CET6</p>
+				<p>证书 ：计算机二级证书、全国普通话二级证书</p>
+    			<h1>工作经验</h1>
+    			<p>2014年10月-2015年6月  ：  聚能创晓(北京)科技有限公司  web前端开发工程师</p>
+				<p>2016年7月——2017年3月 ：北京大卫之选网络科技有限公司 web前端开发工程师</p>
+    			<p>工作描述 ：</p>
+    			<p class="m-l">1.	负责网站前端开发制作。</p>
+    			<p class="m-l">2.	实现页面布局和页面编码。</p>
+    			<p class="m-l">3.	页面动态效果的实现及与后台人员合作实现前端页面效果和功能。</p>
+    			<p class="m-l">4.	负责bug调试，需求修改，项目的后期维护。</p>
+
+    			<h1>项目经验:</h1>
+    			<p>1、利用jqueryui实现专题管理拖拽排序功能；2、利用echarts实现报告管理分析模板功能；3、利用Ajax实现数据概览媒体数据和社交数据功能；4、利用layer.js实现数据概览新闻详情页的预览功能；5、实现数据概览数据的筛选；6、实现专题列表功能的开发；7、实现专题管理模块功能的开发；8、使用正则表达式实现表单验证,侧边栏新闻列表；9、专题对比添加对比功能的实现</p>
+    			<p>我是文字</p>
+    			<p>我是文字</p>
+    			<p>我是文字</p>
+    			<p>我是文字</p>
+    			<p>我是文字</p>
+    			<p>我是文字</p>
+    			<p>我是文字</p>
+    			<p>我是文字</p>
+    			<p>我是文字</p>
+    			<p>我是文字</p>
+
+    		</div>
+    	</div>
+    	<div class="section section_04">
+    		<div class="section_box">
+    			<h2 class="title">我的作品</h2>
+    			<ul>
+    				<li>
+    					<img src="img/1.png" height="200" width="200" alt="">
+    					<span></span>
+    					<p class="txt">全能设计</p>
+    				</li>
+    				<li>
+    					<img src="img/1.png" height="200" width="200" alt="">
+    					<span></span>
+    					<p class="txt">全能设计</p>
+    				</li>
+    				<li>
+    					<img src="img/1.png" height="200" width="200" alt="">
+    					<span></span>
+    					<p class="txt">全能设计</p>
+    				</li>
+    				<li>
+    					<img src="img/1.png" height="200" width="200" alt="">
+    					<span></span>
+    					<p class="txt">全能设计</p>
+    				</li>
+    			</ul>
+    			<p class="info">这是我们部分作品</p>
+    			<p class="more"><a href="#">更多demo请问本人</a></p>
+    		</div>
+    	</div>
+    	<div class="section">555</div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/jquery-slimscroll.min.js"></script>
+<script src="js/drawImg.js"></script>
+<script>
+	$(function(){
+		// 给每一屏都加上背景图片
+		var arrBg = ['img/img_01.jpg','img/img_02.jpg','img/img_03.jpg','img/img_04.jpg','img/bg.jpg'];
+		$('.section').each(function(i,item){
+			$(item).css({'backgroundImage':'url('+ arrBg[i] +')'});
+		})
+
+		var bFlag = true;
+		$('#fullpage').fullpage({
+			anchors:['page1','page2','page3','page4','page5'],
+			navigation:true,
+			scrollOverflow:true,
+			afterLoad:function(link,index){
+				if(index == 1){
+					if(bFlag){
+						bFlag = false;
+					}
+					var aP = $('.section_01 p');	
+					aP.eq(0).fadeIn(600,function(){
+						aP.eq(1).fadeIn(600,function(){
+							aP.eq(2).fadeIn(600,function(){
+								aP.eq(3).fadeIn(600,function(){
+									aP.eq(4).fadeIn(600,function(){
+										bFlag = true;
+									});
+								})
+							})
+						});
+					});
+					
+				}else if( index == 2 ){
+					// 绘制圆环
+					huan('canvas1',300,'HTML5');
+					huan('canvas2',180,'javaScript');
+					huan('canvas3',250,'面向对象');
+					huan('canvas4',300,'移动web');
+				}
+				// console.log( link+'---'+index );
+			},
+			onLeave:function(index,nextIndex,direction){
+				if( index == 1 || nextIndex == 1 ){
+					
+					if( bFlag ){
+						var aP = $('.section_01 p');
+						aP.hide(100);
+					}
+					
+				}
+				console.log( index+'---'+nextIndex );
+			}
+		});
+		
+	});
+</script>
