@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="app">
+    
+</body>
+<script>
+    angular.module( 'app', [] )
+        .run( [ '$rootScope', '$log', function ( $rootScope, $log ) {
+
+            $log.log( '正常打印数据, 就是 console.log 方法' );
+
+            // $log.log( $log.log == console.log );
+            var num = 123;
+            $log.info( num );
+
+
+            $log.warn( '警告信息' );
+        
+            $log.error( '红色的错误' );
+
+            $log.debug( '调试信息' );
+
+
+        }] )
+</script>
+</html>

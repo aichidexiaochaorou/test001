@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            border: 1px solid blue;
+        }
+       
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+
+    </style>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app>
+    <div ng-mouseover=" isover=true " ng-mouseleave=" isover=false " 
+         ng-class="{ red: isover, green: !isover }"></div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="app">
+    <input type="button" value=" {{value}} " ng-disabled="no">
+</body>
+<script>
+    angular.module( 'app', [] )
+        .run( [ '$rootScope', '$interval', function ( $rootScope, $interval ) {
+            $rootScope.no = true;
+            $rootScope.second = 5;
+            $rootScope.value = '请等待 ' + $rootScope.second + ' 秒';
+
+            var promise = $interval(function () {
+                $rootScope.second--;
+                $rootScope.value = '请等待 ' + $rootScope.second + ' 秒';
+                console.log( $rootScope.second );
+                if ( $rootScope.second == 0 ) {
+                    $rootScope.no = false;
+                    $rootScope.value = ' click ';
+                    // 停下计时器
+                    $interval.cancel( promise );
+                }   
+            }, 1000);
+
+        }] )
+</script>
+</html>

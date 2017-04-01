@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app>
+    <h2>使用 ng-show 与 ng-hide</h2>
+    <ul>
+        <li><div ng-click="show1 = !show1">菜单</div>
+            <ul ng-show="show1">
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+            </ul>
+        </li>
+        <li><div ng-click="show2=!show2">菜单</div>
+            <ul ng-hide="show2">
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2>使用 ng-if</h2>
+    <ul>
+        <li><div ng-click="show3 = !show3">菜单</div>
+            <ul ng-if="show3">
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+            </ul>
+        </li>
+        <li><div ng-click="show4=!show4">菜单</div>
+            <ul ng-if="show4">
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+</html>

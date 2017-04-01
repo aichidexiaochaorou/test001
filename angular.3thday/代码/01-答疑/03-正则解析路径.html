@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    // 用户输入一个路径
+    // var path = 'C:\\Users\\jklib\\Desktop\\angular-1.5.8\\docs\\components\\bootstrap-3.1.1\\js\\bootstrap.js';
+    // var path = 'C:\\Users\\jklib\\Desktop\\angular-1.5.8\\docs\\components\\bootstrap-3.1.1\\js\\.gitignore';
+
+    var path = 'D:\\1.mp3';
+
+
+    // 解析
+    //        12        34   5
+    var r = /^((.:).*\\)((.+?)(\..+|))$/;
+
+    var m = r.exec( path );
+    // match
+
+    console.log( '解析的路径为: ' + path + '\n' +
+                 '驱动器为: ' + m[ 2 ] + '\n' +
+                 '文件路径为: ' + m[ 1 ] + '\n' +
+                 '文件名为: ' + m[ 3 ] + '\n' +
+                 '文件后缀名为: ' + m[ 5 ] + '\n' +
+                 '没有后缀名的文件名为: ' + m[ 4 ]
+                 );
+
+
+
+     // 验证贪婪
+     console.log( /(.+)(.+)(.+)/.exec( 'abcdefg' ) );
+     console.log( /(.+?)(.+)(.+)/.exec( 'abcdefg' ) );
+     console.log( /(.*)(.*)(.*)/.exec( 'abcdefg' ) );
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="mainApp">
+    <img ng-src="{{ path }}" alt="">
+</body>
+<script>
+    angular.module( 'mainApp', [] )
+        .run( function ( $rootScope ) {
+            $rootScope.path = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491635712&' +
+                              'di=5f82722b81d2845ebcd4c0c8bd8feb2d&imgtype=jpg&er=1&src=http%3A%2F%2Fstatic6.' +
+                              'photo.sina.com.cn%2Fmiddle%2F4d72e7a9h7dbebf21ddd5%26amp%3B690';
+        });
+</script>
+</html>

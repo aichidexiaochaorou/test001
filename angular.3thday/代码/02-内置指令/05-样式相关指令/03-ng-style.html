@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../angular.js"></script>
+</head>
+<body ng-app="mainApp">
+    <div ng-style="{ backgroundColor: 'red', width: '200px', height: '100px' }"></div>
+    <div ng-style="css" ng-mouseover="bk='red'" ng-mouseleave="bk='green'"></div>
+</body>
+<script>
+    angular.module( 'mainApp', [] )
+        .run( function ( $rootScope ) {
+            $rootScope.css = {
+                width: '300px',
+                height: '100px',
+                border: '1px dashed red'
+            };
+
+            $rootScope.$watch( 'bk', function ( newV, oldV ) {
+                $rootScope.css.backgroundColor = newV;
+            });
+        })
+</script>
+</html>

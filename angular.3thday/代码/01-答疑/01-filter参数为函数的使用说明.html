@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../angular.js"></script>
+</head>
+<body ng-app="mainApp">
+    <ul>
+        <li ng-repeat="item in [ 1, 3, 4, 2, 6, 5, 8, 7, 9, 0 ] | filter: even" >{{ item }}</li>
+    </ul>
+</body>
+<script>
+    angular.module( 'mainApp', [] )
+        .run( function ( $rootScope ) {
+            $rootScope.even = function ( v ) {
+                // 该方法的参数就是 当前遍历的元素, 当前元素的索引, 原始数组
+                return v % 2 == 0;
+            };
+        });
+
+</script>
+</html>

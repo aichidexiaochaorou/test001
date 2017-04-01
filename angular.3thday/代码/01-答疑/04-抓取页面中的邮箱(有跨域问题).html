@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"> 抓取 </button>
+    <div id="container"></div>
+</body>
+<script>
+    var container = document.getElementById( 'container' );
+
+    document.getElementById( 'btn' ).onclick = function () {
+        var url = 'http://tieba.baidu.com/p/2366935784';
+
+        var xhr = new XMLHttpRequest();
+        xhr.open( 'GET', url );
+        xhr.onreadystatechange = function () {
+            if ( xhr.readyState === 4 && xhr.status === 200 ) {
+
+                // console.log( xhr.responseText );
+
+                var html = xhr.responseText;
+                var r = /\w+@\w+(\.\w+)+/g;
+                var list = [];
+
+                var m;
+
+                while ( ( m = r.exec( html )) != null ) {
+                    list.push( m[ 0 ] );
+                }
+                
+
+                container.innerHTML = list.map( function ( v ) {
+                    return v + '<br/>';
+                }).join( '' );
+
+                // 网络爬虫
+
+
+            }
+        } 
+        xhr.send();
+
+    };
+</script>
+</html>
