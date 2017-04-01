@@ -1,0 +1,83 @@
+@jdc:#d8505c;
+html,body{
+  height: 100%;
+}
+.category{
+  /*分类的头部*/
+  height: 100%;
+  .category-header{
+    /*表单*/
+    form{
+      width: 100%;
+      height: 100%;
+      padding-top:7px;
+      input{
+        width: 100%;
+        height: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    }
+  }
+  /*分类主体*/
+  .category-content{
+    height: 100%;
+    padding-top:44px;
+    
+    .con-left{
+      float: left;
+      width: 90px;
+      height: 100%;
+      overflow: hidden;
+      ul{
+        li{
+          a{
+            display: block;
+            width: 90px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-right:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+          }
+        }
+        li.active{
+          a{
+            color:@jdc;
+            border-right: none;
+          }
+        }
+
+      }
+    }
+    .con-right{
+      height: 100%;
+      /*让盒子绝缘*/
+      overflow: hidden;
+      padding:10px;
+      .right-in{
+        .banner{
+          display: block;
+          img{
+            width: 100%;
+          }
+        }
+        ul{
+          padding-top:15px;
+          li{
+            float: left;
+            width: 33.33%;
+            text-align: center;
+            a{
+              display: block;
+              img{
+                width: 60%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

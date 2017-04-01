@@ -1,0 +1,72 @@
+html,
+body {
+  height: 100%;
+}
+.category {
+  /*������ͷ��*/
+  height: 100%;
+  /*��������*/
+}
+.category .category-header {
+  /*����*/
+}
+.category .category-header form {
+  width: 100%;
+  height: 100%;
+  padding-top: 7px;
+}
+.category .category-header form input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.category .category-content {
+  height: 100%;
+  padding-top: 44px;
+}
+.category .category-content .con-left {
+  float: left;
+  width: 90px;
+  height: 100%;
+  overflow: hidden;
+}
+.category .category-content .con-left ul li a {
+  display: block;
+  width: 90px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.category .category-content .con-left ul li.active a {
+  color: #d8505c;
+  border-right: none;
+}
+.category .category-content .con-right {
+  height: 100%;
+  /*�ú��Ӿ�Ե*/
+  overflow: hidden;
+  padding: 10px;
+}
+.category .category-content .con-right .right-in .banner {
+  display: block;
+}
+.category .category-content .con-right .right-in .banner img {
+  width: 100%;
+}
+.category .category-content .con-right .right-in ul {
+  padding-top: 15px;
+}
+.category .category-content .con-right .right-in ul li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.category .category-content .con-right .right-in ul li a {
+  display: block;
+}
+.category .category-content .con-right .right-in ul li a img {
+  width: 60%;
+}
